@@ -8,7 +8,7 @@
     TaskName="Xunit.Runner.MSBuild.xunit"/>
 
   <Target Name="Test">
-	<xunit Assembly="UnitTestProject1\bin\**\UnitTestProject1.dll" />
+	<xunit Assembly="UnitTestProject1\bin\release\UnitTestProject1.dll" />
   </Target>
 
 </Project>
