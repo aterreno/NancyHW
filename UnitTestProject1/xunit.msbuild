@@ -4,15 +4,12 @@
     xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <UsingTask
-    AssemblyFile="C:\xunit\xunit.runner.msbuild.dll"
+    AssemblyFile="xunit.runner.msbuild.dll"
     TaskName="Xunit.Runner.MSBuild.xunit"/>
 
-  <ItemGroup>
-    <TestAssemblies Include="**\bin\**\*.UnitTest*.dll" />
-  </ItemGroup>
-
   <Target Name="Test">
-    <xunit Assemblies="@(TestAssemblies)" />
+						\UnitTestProject1\bin\Release
+    <xunit Assembly="UnitTestProject1\bin\**\UnitTestProject1.dll" />
   </Target>
 
 </Project>
