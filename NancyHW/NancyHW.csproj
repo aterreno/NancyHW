@@ -43,9 +43,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Nancy.0.22.2\lib\net40\Nancy.dll</HintPath>
     </Reference>
-    <Reference Include="Nancy.Hosting.Aspnet, Version=0.21.1.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Nancy.Hosting.Aspnet, Version=0.22.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Nancy.Hosting.Aspnet.0.21.1\lib\net40\Nancy.Hosting.Aspnet.dll</HintPath>
+      <HintPath>..\packages\Nancy.Hosting.Aspnet.0.22.2\lib\net40\Nancy.Hosting.Aspnet.dll</HintPath>
     </Reference>
     <Reference Include="Nancy.ViewEngines.Razor, Version=0.22.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -71,9 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="Views\index.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Views\index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -112,10 +110,6 @@
 if $(ConfigurationName) == Debug (
 xcopy /s /y /R "$(SolutionDir)packages\Nancy.Viewengines.Razor.0.21.1\BuildProviders\Nancy.ViewEngines.Razor.BuildProviders.dll" "$(ProjectDir)bin\"
 xcopy /s /y /R "$(SolutionDir)packages\Nancy.Viewengines.Razor.0.21.1\lib\Net40\Nancy.ViewEngines.Razor.dll" "$(ProjectDir)bin\"
-)
-if $(ConfigurationName) == Debug (
-xcopy /s /y /R "$(SolutionDir)packages\Nancy.Viewengines.Razor.0.22.2\BuildProviders\Nancy.ViewEngines.Razor.BuildProviders.dll" "$(ProjectDir)bin\"
-xcopy /s /y /R "$(SolutionDir)packages\Nancy.Viewengines.Razor.0.22.2\lib\Net40\Nancy.ViewEngines.Razor.dll" "$(ProjectDir)bin\"
 )</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
