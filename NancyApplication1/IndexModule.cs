@@ -6,8 +6,7 @@
     {
         public IndexModule()
         {
-            Get["/"] = parameters => View["index"];
-            Get["/hello"] = parameters => View["hello"];
+            Get["/"] = parameters => View["index"];            
         }
     }
 }
